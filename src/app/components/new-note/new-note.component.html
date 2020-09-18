@@ -1,0 +1,32 @@
+<div class="container">
+  <mat-card class="new-note">
+    <form [formGroup]="noteForm" (ngSubmit)="submitNoteform()" class="new-note__form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Заголовок</mat-label>
+        <input name="title" formControlName="title" matInput autocomplete="off">
+        <mat-error *ngIf="!this.noteForm.value.title">
+          Буда-ласка ведіть заголовок поста
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Посилання</mat-label>
+        <input name="url" formControlName="url" matInput autocomplete="off">
+        <mat-error *ngIf="!this.noteForm.value.title">
+          Буда-ласка ведіть посилання поста
+        </mat-error>
+      </mat-form-field>
+
+      <div class="new-note__upload">
+        <label class="new-note__upload-label" for="thumb">
+          <img *ngIf="this.selectedThumbPreview" [src]="this.selectedThumbPreview" class="ng-star-inserted">
+        </label>
+        <input (change)="changeNoteImg($event)" accept="image/*" class="no_display" id="thumb" type="file">
+      </div>
+
+      <angular-editor name="text" formControlName="text" class="new-note__html-editor" [placeholder]="'Enter text here...'"></angular-editor>
+
+      <button type="submit" mat-raised-button color="primary">Зберегти</button>
+
+    </form>
+  </mat-card>
+</div>

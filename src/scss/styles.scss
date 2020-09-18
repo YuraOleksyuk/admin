@@ -1,0 +1,76 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body, * {
+  //height: 100%;
+  box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6,ul,p,ol {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: #e9e8e8;
+}
+ul,ol,li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.container {
+  padding: 0 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  padding: 0 10px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.white-container {
+  background: #fefefe;
+  padding: 20px 0;
+  border: 1px solid #dedddd;
+}
+
+.row {
+  display: flex;
+}
+
+.section-title {
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+
+}
+
+.mat-sidenav-content {
+  min-height: 100vh;
+}
+
+.html-editor {
+  display: block;
+  padding-bottom: 20px;
+}
+
+.no_display {
+  display: none!important;
+}
+
+@import "components/notes-list";
+@import "components/new-note";
+@import "components/top-toolbar";
+@import "components/side-nav";
+@import "components/categories";
+@import "components/categories-new";
+@import "components/thumb";

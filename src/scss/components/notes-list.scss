@@ -1,0 +1,23 @@
+.notes-list {
+  padding: 50px 0;
+
+  &__left {
+    display: flex;
+    align-items: center;
+
+    img {
+      max-width: 150px;
+      margin-right: 25px;
+    }
+  }
+
+  &__item {
+    display: flex!important;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  mat-card {
+    margin-bottom: 20px;
+  }
+}
